@@ -43,4 +43,20 @@ export const typeDefs = gql`
     createOrganization(name: String!): Organization!
     addMember(orgId: ID!, email: String!, role: OrgRole!): Membership!
   }
+
+  type Invite {
+  id: ID!
+  orgId: ID!
+  email: String!
+  role: OrgRole!
+  expiresAt: String!
+  acceptedAt: String
+  # token returned only at creation time
+  token: String
+}
+
+extend type Mutation {
+  inviteMember(orgId: ID!, email: String!, role: OrgRole!): Invite!
+  acceptInvite(token: String!): Membership!
+}
 `;
