@@ -23,6 +23,20 @@ A production-style backend built with Node.js, TypeScript, GraphQL, and MongoDB.
 - Invite acceptance flow
 - Membership creation upon acceptance
 
+### Project & Task Management
+- Organization-scoped projects
+- Tasks nested under projects
+- Task workflow status (TODO → IN_PROGRESS → DONE)
+- Admin/Manager project creation
+- Admin/Manager task creation
+- Task status updates with RBAC enforcement
+
+### Organization Dashboard
+- Organization-level analytics query
+- Total project count
+- Total task count
+- Task breakdown by status
+
 ## Tech Stack
 - Node.js
 - TypeScript
@@ -35,7 +49,7 @@ A production-style backend built with Node.js, TypeScript, GraphQL, and MongoDB.
 In active development
 
 Next Steps:
-- Projects & Tasks
-- Redis caching
+- Task assignment system
+- Redis caching for dashboard queries
 - AI task assistant
 - Frontend (React + Apollo Client)
